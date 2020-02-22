@@ -1,5 +1,12 @@
 package ru.job4j.calculator;
 
+/**
+ * Class Класс для вычисления сложения двух чисел
+ * @author KornilovaAnn
+ * @since 22.02.2020
+ * @version 1
+ */
+
 public class Calculator {
     public static void main(String[] args) {
         int one =1;
@@ -23,11 +30,14 @@ public class Calculator {
         Calculator.plus(100, 500);
         Calculator.plus(4,2);
         Calculator.plus(3,5);
-
-
-
-
     }
+
+    /**
+     *Сложение
+     * @param first первый аргумент
+     * @param second второй аргумент
+     * сразу выводится результат
+     */
 
     public static void plus (int first,int second) {
         int result = first + second;
