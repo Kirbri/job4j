@@ -13,8 +13,8 @@ public class TriangleTest {
     }
 
     @Test
-    public void whenNoExist(){
-        boolean result =Triangle.exist(3,5,10);
+    public void whenNoExist() {
+        boolean result = Triangle.exist(3, 5, 10);
         assertThat(result, is(false));
     }
 }
