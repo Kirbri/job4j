@@ -5,7 +5,7 @@ public class Check {
     public static boolean mono(boolean[] data) {
         boolean result = true;
         boolean flag = data[0];
-        for (int i = 0; i < data.length - 1; i++) {
+        for (int i = 0; i < data.length; i++) {
             if (flag != data[i]) {
                 result = false;
                 break;
