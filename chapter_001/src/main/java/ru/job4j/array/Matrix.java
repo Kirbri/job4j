@@ -1,7 +1,5 @@
 package ru.job4j.array;
 
-import org.w3c.dom.ls.LSOutput;
-
 public class Matrix {
     public int[][] multiple(int size) {
         int[][] table = new int[size][size];
