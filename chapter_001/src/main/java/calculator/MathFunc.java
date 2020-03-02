@@ -2,10 +2,10 @@ package ru.job4j.calculator;
 
 public class MathFunc {
     public static void main(String[] args) {
-        int result1 = MathFunc.func1(3);
+        int func1 = MathFunc.func1(3);
         int result2 = MathFunc.func1(5);
         int result = MathFunc.func1(100);
-        int total = result1 + result2;
+        int total = func1 + result2;
         System.out.println(total);
     }
 
