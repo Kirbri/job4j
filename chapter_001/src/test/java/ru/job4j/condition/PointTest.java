@@ -23,6 +23,23 @@ public class PointTest {
         double expected = 16.64;
         double out = a.distance(b);
         Assert.assertEquals(expected, out, 0.01);
+    }
 
+    @Test
+    public void distance2() {
+        Point a = new Point(1, 1);
+        Point b = new Point(-2, 4);
+        double expected = 4.24;
+        double out = a.distance(b);
+        Assert.assertEquals(expected, out, 0.01);
+    }
+
+    @Test
+    public void distance3() {
+        Point a = new Point(1, 1);
+        Point b = new Point(-2, 4);
+        double expected = 4.24;
+        double out = a.distance(b);
+        Assert.assertEquals(expected, out, 0.01);
     }
 }
