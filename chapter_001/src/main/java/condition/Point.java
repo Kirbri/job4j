@@ -1,5 +1,8 @@
 package ru.job4j.condition;
 
+import static java.lang.Math.sqrt;
+import static java.lang.Math.pow;
+
 public class Point {
     /**
      * Это поле объекта. Оно доступно только конкретному объекту.
@@ -16,9 +19,8 @@ public class Point {
         this.y = second;
     }
 
-    public static double distance(Point that) {
-        double rsl = Math.sqrt(Math.pow(that.x - that.x, 2) + Math.pow(that.y - that.y, 2));
-        return rsl;
+    public double distance(Point that) {
+        return sqrt(pow(this.x - that.x, 2) + pow(this.y - that.y, 2));
     }
 
     public static void main(String[] args) {
