@@ -1,61 +1,63 @@
 package ru.job4j.oop;
 
 public class Jukebox {
+    private static final String LN = System.lineSeparator();
+
     public void music(int position){
         if (position == 1){
-            System.out.println("Пусть бегут неуклюже" + System.lineSeparator() +
-                    "Пешеходы по лужам," + System.lineSeparator() +
-                    "А вода по асфальту рекой." + System.lineSeparator() +
-                    "И не ясно прохожим" + System.lineSeparator() +
-                    "В этот день непогожий" + System.lineSeparator() +
-                    "Почему я весёлый такой." + System.lineSeparator() +
-                    "" + System.lineSeparator() +
-                    "Ах я играю на гармошке" + System.lineSeparator() +
-                    "У прохожих на виду," + System.lineSeparator() +
-                    "К сожаленью, день рожденья" + System.lineSeparator() +
-                    "Только раз в году." + System.lineSeparator() +
-                    "" + System.lineSeparator() +
-                    "Прилетит вдруг волшебник" + System.lineSeparator() +
-                    "В голубом вертолёте" + System.lineSeparator() +
-                    "И бесплатно покажет кино." + System.lineSeparator() +
-                    "С днём рожденья поздравит" + System.lineSeparator() +
-                    "И, наверно, оставит" + System.lineSeparator() +
-                    "Мне в подарок пятьсот эскимо." + System.lineSeparator() +
-                    "" + System.lineSeparator() +
-                    "Ах я играю на гармошке" + System.lineSeparator() +
-                    "У прохожих на виду," + System.lineSeparator() +
-                    "К сожаленью, день рожденья" + System.lineSeparator() +
-                    "Только раз в году." + System.lineSeparator() +
-                    "\n" + System.lineSeparator() +
-                    "К сожаленью, день рожденья" + System.lineSeparator() +
+            System.out.println("Пусть бегут неуклюже" + LN +
+                    "Пешеходы по лужам," + LN +
+                    "А вода по асфальту рекой." + LN +
+                    "И не ясно прохожим" + LN +
+                    "В этот день непогожий" + LN +
+                    "Почему я весёлый такой." + LN +
+                    "" + LN +
+                    "Ах я играю на гармошке" + LN +
+                    "У прохожих на виду," + LN +
+                    "К сожаленью, день рожденья" + LN +
+                    "Только раз в году." + LN +
+                    "" + LN +
+                    "Прилетит вдруг волшебник" + LN +
+                    "В голубом вертолёте" + LN +
+                    "И бесплатно покажет кино." + LN +
+                    "С днём рожденья поздравит" + LN +
+                    "И, наверно, оставит" + LN +
+                    "Мне в подарок пятьсот эскимо." + LN +
+                    "" + LN +
+                    "Ах я играю на гармошке" + LN +
+                    "У прохожих на виду," + LN +
+                    "К сожаленью, день рожденья" + LN +
+                    "Только раз в году." + LN +
+                    "" + LN +
+                    "К сожаленью, день рожденья" + LN +
                     "Только раз в году.");
         } else if (position == 2){
-            System.out.println("Спят усталые игрушки, книжки спят." + System.lineSeparator() +
-                    "Одеяла и подушки ждут ребят." + System.lineSeparator() +
-                    "Даже сказка спать ложится," + System.lineSeparator() +
-                    "Чтобы ночью нам присниться." + System.lineSeparator() +
-                    "Ты ей пожелай:" + System.lineSeparator() +
-                    "Баю-бай." + System.lineSeparator() +
-                    "\n" +
-                    "Обязательно по дому в этот час" + System.lineSeparator() +
-                    "Тихо-тихо ходит дрема возле нас." + System.lineSeparator() +
-                    "За окошком всё темнее," + System.lineSeparator() +
-                    "Утро ночи мудренее." + System.lineSeparator() +
-                    "Глазки закрывай," + System.lineSeparator() +
-                    "Баю-бай." + System.lineSeparator() +
-                    "" + System.lineSeparator() +
-                    "В сказке можно покататься на луне." + System.lineSeparator() +
-                    "И по радуге промчаться на коне." + System.lineSeparator() +
-                    "Со слоненком подружиться" + System.lineSeparator() +
-                    "И поймать перо Жар-птицы." + System.lineSeparator() +
-                    "Глазки закрывай," + System.lineSeparator() +
-                    "Баю-бай." + System.lineSeparator() +
-                    "" + System.lineSeparator() +
-                    "Баю-бай, должны все люди ночью спать." + System.lineSeparator() +
-                    "Баю-баю, завтра будет день опять." + System.lineSeparator() +
-                    "За день мы устали очень," + System.lineSeparator() +
-                    "Скажем всем: \"Спокойной ночи!" + System.lineSeparator() +
-                    "Глазки закрывай," + System.lineSeparator() +
+            System.out.println("Спят усталые игрушки, книжки спят." + LN +
+                    "Одеяла и подушки ждут ребят." + LN +
+                    "Даже сказка спать ложится," + LN +
+                    "Чтобы ночью нам присниться." + LN +
+                    "Ты ей пожелай:" + LN +
+                    "Баю-бай." + LN +
+                    "" + LN +
+                    "Обязательно по дому в этот час" + LN +
+                    "Тихо-тихо ходит дрема возле нас." + LN +
+                    "За окошком всё темнее," + LN +
+                    "Утро ночи мудренее." + LN +
+                    "Глазки закрывай," + LN +
+                    "Баю-бай." + LN +
+                    "" + LN +
+                    "В сказке можно покататься на луне." + LN +
+                    "И по радуге промчаться на коне." + LN +
+                    "Со слоненком подружиться" + LN +
+                    "И поймать перо Жар-птицы." + LN +
+                    "Глазки закрывай," + LN +
+                    "Баю-бай." + LN +
+                    "" + LN +
+                    "Баю-бай, должны все люди ночью спать." + LN +
+                    "Баю-баю, завтра будет день опять." + LN +
+                    "За день мы устали очень," + LN +
+                    "Скажем всем: \"Спокойной ночи!" + LN +
+                    "Глазки закрывай," + LN +
                     "Баю-бай.");
         } else {
             System.out.println("Песня не найдена");
