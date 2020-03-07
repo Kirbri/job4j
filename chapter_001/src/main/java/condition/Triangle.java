@@ -63,10 +63,7 @@ public class Triangle {
      * @return
      */
     private boolean exist(double a, double c, double b) {
-        if (a + c > b & a + b > c & c + b > a)
-            return true;
-        else
-            return false;
+        return  a + c > b && a + b > c && c + b > a;
     }
 
     public static void main(String[] args) {
