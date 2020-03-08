@@ -12,6 +12,6 @@ public class Animal {
     }
 
     public static void main(String[] args) {
-        System.out.println(new Animal());
+        Animal animal = new Animal();
     }
 }
