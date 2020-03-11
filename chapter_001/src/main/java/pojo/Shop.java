@@ -4,10 +4,10 @@ import tracker.Predator;
 
 public class Shop {
     public Product[] delete(Product[] products, int index){
-        for (index = 0; index < products.length-2; index++) {
+        for (index = 0; index < products.length - 1; index++) {
             products[index] = products[index + 1];
         }
-        products[products.length - 2] = null;
+        products[products.length - 1] = null;
         return products;
     }
 
@@ -63,7 +63,7 @@ public class Shop {
         products2[2] = new Product("Bread", 4);
         products2[3] = new Product("Egg", 19);
         Shop shop = new Shop();
-        products2 = shop.delete(products2, 0);
+        products2 = shop.delete(products2, 4);
 
         for (int i = 0; i < products2.length; i++) {
             if (products2[i] != null) {
