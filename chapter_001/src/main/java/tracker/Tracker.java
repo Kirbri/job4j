@@ -90,4 +90,16 @@ public class Tracker {
         }
         return flag;
     }
+
+    public boolean delete(String id) {
+        int index = indexOf(id);
+        boolean flag = false;
+        if (findById(id) != null){
+            System.arraycopy(items, index + 1, items, index, position - index);
+            items[position - 1] = null;
+            position--;
+            flag = true;
+        }
+        return flag;
+    }
 }
