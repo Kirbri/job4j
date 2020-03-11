@@ -52,16 +52,13 @@ public class Tracker {
     /**
      * Метод получения заявки по id
      */
-    public Item findById(String id){
-        Item flag = null;
-        for (int i = 0; i < this.items.length-1; i++) {
-            if (this.items[i].getId() == id){
-                flag = this.items[i];
-                break;
-            }
-        }
-        return flag;
+    public Item findById(String id) {
+        // Находим индекс
+        int index = indexOf(id);
+        // Если индекс найден возвращаем item, иначе null
+        return index != -1 ? items[index] : null;
     }
+
 
     /**
      * Метод генерирует уникальный ключ для заявки.
@@ -71,5 +68,26 @@ public class Tracker {
     private String generateId() {
         Random rm = new Random();
         return String.valueOf(rm.nextLong() + System.currentTimeMillis());
+    }
+
+    private int indexOf(String id) {
+        int rsl = -1;
+        for (int index = 0; index < position; index++) {
+            if (items[index].getId().equals(id)) {
+                rsl = index;
+                break;
+            }
+        }
+        return rsl;
+    }
+
+    public boolean replace(String id, Item item) {
+        int rsl = indexOf(id);
+        boolean flag = false;
+        if (rsl != -1){
+            this.items[rsl].setName(item.getName());
+            flag = true;
+        }
+        return flag;
     }
 }
