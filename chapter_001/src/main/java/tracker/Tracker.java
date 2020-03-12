@@ -94,7 +94,7 @@ public class Tracker {
     public boolean delete(String id) {
         int index = indexOf(id);
         boolean flag = false;
-        if (findById(id) != null){
+        if (index != -1){
             System.arraycopy(items, index + 1, items, index, position - index);
             items[position - 1] = null;
             position--;
