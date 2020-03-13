@@ -40,13 +40,13 @@ public class Tracker {
      * Метод получения списка по имени
      */
     public Item[] findByName(String key){
-        Item[] items = new Item[position];
-        for (int i = 0; i < items.length-1; i++) {
-            if (items[i].getName() == key){
-                items = Arrays.copyOf(this.items, position);
+        Item[] newItems = new Item[position];
+        for (int i = 0; i < newItems.length-1; i++) {
+            if (newItems[i].getName().equals(key)){
+                newItems = Arrays.copyOf(this.items, i);
             }
         }
-        return items;
+        return newItems;
     }
 
     /**
