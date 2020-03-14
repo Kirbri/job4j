@@ -27,13 +27,7 @@ public class Tracker {
      * Метод получение списка всех заявок
      */
     public Item[] findAll(){
-        Item[] items = new Item[position];
-        for (int i = 0; i < items.length-1; i++) {
-            if (items[i] != null){
-                items = Arrays.copyOf(this.items, position);
-            }
-        }
-        return items;
+        return Arrays.copyOf(this.items, position);
     }
 
     /**
@@ -41,12 +35,13 @@ public class Tracker {
      */
     public Item[] findByName(String key){
         Item[] newItems = new Item[position];
-        for (int i = 0; i < newItems.length-1; i++) {
+        int size = 0;
+        for (int i = 0; i < position; i++) {
             if (newItems[i].getName().equals(key)){
-                newItems = Arrays.copyOf(this.items, i);
+                newItems[size++] = items[i];
             }
         }
-        return newItems;
+        return Arrays.copyOf(newItems, size);
     }
 
     /**
