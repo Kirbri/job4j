@@ -44,7 +44,11 @@ public class StartUI {
     public static void findById(Input input, Tracker tracker) {
         System.out.println("=== Find item by Id ===");
         String ID = input.askStr("Enter ID: ");
-        System.out.println(tracker.findById(ID));
+        if (tracker.findById(ID) == null) {
+            System.out.println("Заявка не найдена");
+        } else {
+            System.out.println(tracker.findById(ID));
+        }
     }
 
     public static void findByName(Input input, Tracker tracker) {
