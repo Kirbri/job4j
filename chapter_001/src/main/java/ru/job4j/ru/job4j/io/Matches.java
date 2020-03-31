@@ -20,13 +20,14 @@ public class Matches {
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
         int matches = 11;
+        int gamerWin = 0;
 
         System.out.println("Играет два человека, вы можете взять от 1 до 3 спичек! Победит тот, кто возьмёт последние спички!");
         System.out.println();
         while (matches > 0) {
             matches -= infoAboutGamer(1);
             if (matches <= 0) {
-                System.out.println("Первый игрок победил!");
+                gamerWin = 1;
                 break;
             }
 
@@ -34,11 +35,12 @@ public class Matches {
 
             matches -= infoAboutGamer(2);
             if (matches <= 0) {
-                System.out.println("Второй игрок победил!");
+                gamerWin = 2;
                 break;
             }
 
             System.out.println("На столе " + matches + " спичек.");
         }
+        System.out.println("Победил игрок №" + gamerWin);
     }
 }
