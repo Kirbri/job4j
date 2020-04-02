@@ -3,9 +3,16 @@ package ru.job4j.ru.job4j.io;
 import java.util.Scanner;
 
 public class Matches {
+    static String nameGamer;
+
     public static int infoAboutGamer(int gamer) {
+        if (gamer % 2 == 0){
+            nameGamer = "второй";
+        } else {
+            nameGamer = "первый";
+        }
         Scanner input = new Scanner(System.in);
-        System.out.print("Сколько игрок " + gamer + "  заберёт спичек? ");
+        System.out.print("Сколько спичек заберёт "+ nameGamer + " игрок?");
         int value = Integer.valueOf(input.nextLine());
         int result = 0;
         if (value>=1 & value<=3) {
@@ -20,27 +27,18 @@ public class Matches {
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
         int matches = 11;
-        int gamerWin = 0;
+        int numberOfGamer = 1;
 
         System.out.println("Играет два человека, вы можете взять от 1 до 3 спичек! Победит тот, кто возьмёт последние спички!");
         System.out.println();
         while (matches > 0) {
-            matches -= infoAboutGamer(1);
+            matches -= infoAboutGamer(numberOfGamer);
             if (matches <= 0) {
-                gamerWin = 1;
                 break;
             }
-
             System.out.println("На столе " + matches + " спичек.");
-
-            matches -= infoAboutGamer(2);
-            if (matches <= 0) {
-                gamerWin = 2;
-                break;
-            }
-
-            System.out.println("На столе " + matches + " спичек.");
+            numberOfGamer++;
         }
-        System.out.println("Победил игрок №" + gamerWin);
+        System.out.println("Победил " + nameGamer + " игрок!");
     }
 }
