@@ -29,9 +29,12 @@ public class Item {
 
     @Override
     public String toString() {
-        return "Item{" +
-                "name='" + name + '\'' +
-                "ID=" + id + '\'' +
+        return "Item{"
+                +
+                "name='" + name + '\''
+                +
+                "ID=" + id + '\''
+                +
                 '}';
     }
 }

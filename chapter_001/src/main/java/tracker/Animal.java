@@ -3,11 +3,11 @@ package tracker;
 public class Animal {
     String name;
 
-    public Animal (){
+    public Animal() {
         super();
         System.out.println("Class Animal");
     }
-    public Animal (String name) {
+    public Animal(String name) {
         this.name = name;
     }
 

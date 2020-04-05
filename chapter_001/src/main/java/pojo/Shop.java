@@ -3,7 +3,7 @@ package pojo;
 import tracker.Predator;
 
 public class Shop {
-    public Product[] delete(Product[] products, int index){
+    public Product[] delete(Product[] products, int index) {
         for (int i = index; i < products.length - 1; i++) {
             products[i] = products[i + 1];
         }
@@ -58,7 +58,7 @@ public class Shop {
 //        }
 
         //демонстрация работы примера
-        Product products2[] = new Product[5];
+        Product[] products2 = new Product[5];
         products2[1] = new Product("Milk", 10);
         products2[2] = new Product("Bread", 4);
         products2[3] = new Product("Egg", 19);

@@ -3,7 +3,7 @@ package prof;
 public class Engineer extends Profession {
     int numberOfNewIdeas;
 
-    public int getNumberOfNewIdeas(){
+    public int getNumberOfNewIdeas() {
         return numberOfNewIdeas;
     }
 

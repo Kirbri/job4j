@@ -6,16 +6,16 @@ public class Matches {
     static String nameGamer;
 
     public static int infoAboutGamer(int gamer) {
-        if (gamer % 2 == 0){
+        if (gamer % 2 == 0) {
             nameGamer = "второй";
         } else {
             nameGamer = "первый";
         }
         Scanner input = new Scanner(System.in);
-        System.out.print("Сколько спичек заберёт "+ nameGamer + " игрок?");
+        System.out.print("Сколько спичек заберёт " + nameGamer + " игрок?");
         int value = Integer.valueOf(input.nextLine());
         int result = 0;
-        if (value>=1 & value<=3) {
+        if (value >= 1 & value <= 3) {
             result = value;
             System.out.println("Вы взяли корректное число спичек!");
         } else {

@@ -3,7 +3,7 @@ package prof;
 public class Surgeon extends Doctor {
     int theNumberOfOperationsPerDay;
 
-    public int getTheNumberOfOperationsPerDay(){
+    public int getTheNumberOfOperationsPerDay() {
         return theNumberOfOperationsPerDay;
     }
 

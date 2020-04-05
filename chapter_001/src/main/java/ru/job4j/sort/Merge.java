@@ -8,17 +8,16 @@ public class Merge {
         int countLeft = 0;
         int countRight = 0;
         int countRsl = 0;
-        while (countLeft<left.length && countRight<right.length){
+        while (countLeft < left.length && countRight < right.length) {
             if (left[countLeft] < right[countRight]) {
                 rsl[countRsl] = left[countLeft];
                 countRsl++;
                 countLeft++;
-            } else if (left[countLeft] > right[countRight]){
+            } else if (left[countLeft] > right[countRight]) {
                 rsl[countRsl] = right[countRight];
                 countRsl++;
                 countRight++;
-            }
-            else {
+            } else {
                 rsl[countRsl] = right[countRight];
                 countRsl++;
                 countRight++;

@@ -3,7 +3,7 @@ package prof;
 public class Dentist extends Doctor {
     int numberOfTeethRemoved;
 
-    public int getNumberOfTeethRemoved(){
+    public int getNumberOfTeethRemoved() {
         return numberOfTeethRemoved;
     }
 

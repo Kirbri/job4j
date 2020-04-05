@@ -3,7 +3,7 @@ package prof;
 public class Builder extends Engineer {
     int numberOfItemsCreated;
 
-    public int getNumberOfItemsCreated(){
+    public int getNumberOfItemsCreated() {
         return numberOfItemsCreated;
     }
 

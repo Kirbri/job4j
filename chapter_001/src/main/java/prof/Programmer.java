@@ -3,7 +3,7 @@ package prof;
 public class Programmer extends Engineer {
     int amountOfCodeWritten;
 
-    public int getAmountOfCodeWritten(){
+    public int getAmountOfCodeWritten() {
         return numberOfNewIdeas;
     }
 

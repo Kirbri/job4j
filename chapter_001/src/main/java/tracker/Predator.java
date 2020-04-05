@@ -1,12 +1,12 @@
 package tracker;
 
-public class Predator extends Animal{
-    public Predator (){
+public class Predator extends Animal {
+    public Predator() {
         super();
         System.out.println("Class Predator");
     }
 
-    public Predator (String name){
+    public Predator(String name) {
         this.name = name;
     }
 

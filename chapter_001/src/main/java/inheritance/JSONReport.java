@@ -6,9 +6,13 @@ public class JSONReport extends TextReport {
 
     @Override
     public String generate(String name, String body) {
-        return "{"+ LS + LS +
-                "  name: " + name + LS +
-                "  body: " + body + LS + LS +
+        return "{" + LS
+                + LS
+                +
+                "  name: " + name + LS
+                +
+                "  body: " + body + LS + LS
+                +
                 "}";
     }
 }

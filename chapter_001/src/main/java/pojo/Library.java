@@ -32,7 +32,7 @@ public class Library {
 
         for (int i = 0; i < books.length; i++) {
             Book bo = books[i];
-            if (books[i].getNameBook().equals("Clean code")){
+            if (books[i].getNameBook().equals("Clean code")) {
                 System.out.println(bo.getNameBook() + " has " + bo.getNumberOfPages() + " pages");
             }
         }

@@ -3,7 +3,7 @@ package prof;
 public class Doctor extends Profession {
     int numberOfPatients;
 
-    public int getNumberOfPatients(){
+    public int getNumberOfPatients() {
         return numberOfPatients;
     }
 

@@ -3,16 +3,16 @@ package pojo;
 import java.util.Date;
 
 public class Student {
-    private String FIO;
+    private String fio;
     private int group;
     private Date admission;
 
-    public String getFIO() {
-        return FIO;
+    public String getFio() {
+        return fio;
     }
 
-    public void setFIO(String FIO) {
-        this.FIO = FIO;
+    public void setFio(String fio) {
+        this.fio = fio;
     }
 
     public int getGroup() {

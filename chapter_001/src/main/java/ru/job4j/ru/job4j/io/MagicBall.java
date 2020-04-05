@@ -9,7 +9,7 @@ public class MagicBall {
         System.out.print("Я великий Оракул. Что ты хочешь узнать? ");
         String name = input.nextLine();
         int answer = new Random().nextInt(3);
-        switch (answer){
+        switch (answer) {
             case 0:
                 System.out.println("Да");
                 break;

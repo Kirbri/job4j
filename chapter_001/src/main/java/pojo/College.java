@@ -6,10 +6,10 @@ public class College {
     public static void main(String[] args) {
         Student vova = new Student();
         vova.setAdmission(new Date());
-        vova.setFIO("Владимиров В.А.");
+        vova.setFio("Владимиров В.А.");
         vova.setGroup(345);
 
-        System.out.println("Student: " + vova.getFIO() + " in group - " + vova.getGroup()
+        System.out.println("Student: " + vova.getFio() + " in group - " + vova.getGroup()
                 + ", receipt date " + vova.getAdmission());
     }
 }
