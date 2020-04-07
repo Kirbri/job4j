@@ -1,7 +1,5 @@
 package tracker;
 
-import org.w3c.dom.ls.LSOutput;
-
 public class StartUI {
 //    реализация в CreateAction
 //    public static void createItem(Input input, Tracker tracker) {
@@ -88,11 +86,11 @@ public class StartUI {
         UserAction[] actions = {
                 new CreateAction(),
                 new ShowItem(),
-                new EditItem(),
-                new DeleteItem(),
-                new FindById(),
-                new FindByName(),
-                new ExitAction()
+                new EditItemAction(),
+                new DeleteItemAction(),
+                new FindByIdAction(),
+                new FindByNameAction(),
+                new ExitActionAction()
         };
         new StartUI().init(input, tracker, actions);
     }

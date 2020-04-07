@@ -1,6 +1,6 @@
 package tracker;
 
-public class EditItem implements UserAction {
+public class EditItemAction implements UserAction {
     @Override
     public String name() {
         return "=== Edit item ===";

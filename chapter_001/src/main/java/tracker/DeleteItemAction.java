@@ -1,6 +1,6 @@
 package tracker;
 
-public class DeleteItem implements UserAction {
+public class DeleteItemAction implements UserAction {
     @Override
     public String name() {
         return "=== Delete item ===";

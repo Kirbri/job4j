@@ -1,6 +1,6 @@
 package tracker;
 
-public class ExitAction implements UserAction {
+public class ExitActionAction implements UserAction {
     @Override
     public String name() {
         return "=== Exit the menu ===";
