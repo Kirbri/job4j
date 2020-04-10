@@ -4,11 +4,13 @@ public class UserStore {
     public static User findUser(User[] users, String login) throws UserNotFoundException {
         User findUser = null;
         for (int index = 0; index < users.length; index++) {
-            if (users[index].getUsername() == login) {
+            if (users[index].getUsername().equals(login)) {
                 findUser = users[index];
-            } else {
-                throw new UserNotFoundException("No such user");
+                break;
             }
+        }
+        if (findUser.equals(null)) {
+            throw new UserNotFoundException("No such user");
         }
         return findUser;
     }
@@ -17,7 +19,7 @@ public class UserStore {
         if (!user.isValid() || user.getUsername().length() < 3) {
             throw new UserInvalidException("User invalid");
         }
-        return false;
+        return true;
     }
 
     public static void main(String[] args) {
