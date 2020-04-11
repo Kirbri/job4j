@@ -2,6 +2,7 @@ package tracker;
 
 public class ValidateInput extends ConsoleInput {
 
+    @Override
     public int askInt(String question) {
         boolean invalid = true;
         int value = -1;
