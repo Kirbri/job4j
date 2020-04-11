@@ -1,8 +1,8 @@
 package ru.job4j.tracker;
 
 import org.junit.Test;
+import tracker.StubInput;
 import tracker.ValidateInput;
-import tracker.ValidateStubInput;
 
 import java.io.ByteArrayOutputStream;
 import java.io.PrintStream;
@@ -15,8 +15,9 @@ public class ValidateInputTest {
         ByteArrayOutputStream mem = new ByteArrayOutputStream();
         PrintStream out = System.out;
         System.setOut(new PrintStream(mem));
-        String[] data = {"one", "1"};
-        ValidateInput input = new ValidateStubInput(data);
+        ValidateInput input = new ValidateInput(
+                new StubInput(new String[] {"one", "1"})
+        );
         input.askInt("Enter");
         assertThat(
                 mem.toString(),
