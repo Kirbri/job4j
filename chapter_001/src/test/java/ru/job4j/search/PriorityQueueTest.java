@@ -29,7 +29,6 @@ public class PriorityQueueTest {
         queue.put(new Task("second", 5));
         queue.put(new Task("third", 5));
         Task result = queue.take();
-
         assertThat(result.getDesc(), is("first"));
     }
 }
