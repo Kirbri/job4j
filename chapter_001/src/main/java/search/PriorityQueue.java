@@ -10,6 +10,7 @@ public class PriorityQueue {
      * Позиция определять по полю приоритет.
      * Для вставки использовать add(int index, E value)
      * @param task задача
+     *
      */
 
     public void put(Task task) {
