@@ -1,5 +1,7 @@
 package tracker;
 
+import java.util.List;
+
 public class ShowItem implements UserAction {
     @Override
     public String name() {
@@ -8,9 +10,9 @@ public class ShowItem implements UserAction {
 
     @Override
     public boolean execute(Input input, Tracker tracker) {
-        Item[] item = tracker.findAll();
-        for (int i = 0; i < item.length; i++) {
-            System.out.println(item[i].toString());
+        List<Item> item = tracker.findAll();
+        for (int i = 0; i < item.size(); i++) {
+            System.out.println(item.get(i).toString());
         }
         return true;
     }
