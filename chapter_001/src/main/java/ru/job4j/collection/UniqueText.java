@@ -14,7 +14,7 @@ public class UniqueText {
         }
         // for-each text -> hashSet.contains
         for (String value : text) {
-            if (check.contains(value) == false) {
+            if (!check.contains(value)) {
                 rsl = false;
                 break;
             }
