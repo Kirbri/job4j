@@ -14,7 +14,7 @@ import static org.junit.Assert.*;
 
 public class SortByNameItemTest {
     @Test
-    public void sortortIncrease() {
+    public void sortIncrease() {
         List<Item> items = new ArrayList<Item>();
         items.add(new Item("1", "One"));
         items.add(new Item("2", "Two"));
@@ -25,7 +25,7 @@ public class SortByNameItemTest {
     }
 
     @Test
-    public void sortortDecrease() {
+    public void sortDecrease() {
         List<Item> items = new ArrayList<Item>();
         items.add(new Item("1", "One"));
         items.add(new Item("2", "Two"));
@@ -33,5 +33,22 @@ public class SortByNameItemTest {
         items.add(new Item("4", "Four"));
         items.sort(new SortByNameItemDecrease());
         assertThat(items.get(0).getName(), is("Two"));
+    }
+
+    @Test
+    public void sortTwoList() {
+        List<Item> items1 = new ArrayList<Item>();
+        items1.add(new Item("A", "A_One"));
+        items1.add(new Item("B", "B_Two"));
+        items1.add(new Item("C", "C_Three"));
+        items1.add(new Item("D", "D_Four"));
+        items1.sort(new SortByNameItemIncrease());
+        List<Item> items2 = new ArrayList<Item>();
+        items2.add(new Item("A", "A_One"));
+        items2.add(new Item("B", "B_Two"));
+        items2.add(new Item("C", "C_Three"));
+        items2.add(new Item("D", "D_Four"));
+        items2.sort(new SortByNameItemDecrease());
+        assertThat(items1.get(0).getName(), is(items2.get(3).getName()));
     }
 }
