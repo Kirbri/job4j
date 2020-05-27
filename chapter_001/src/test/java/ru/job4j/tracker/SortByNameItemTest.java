@@ -50,7 +50,7 @@ public class SortByNameItemTest {
         items2.add(new Item("C", "C_Three"));
         items2.add(new Item("D", "D_Four"));
         items2.sort(new SortByNameItemDecrease());
-//        Collections.reverse(items2);
-//        assertThat(items1, is(items2));
+        Collections.reverse(items2);
+        assertThat(items1, is(items2));
     }
 }
