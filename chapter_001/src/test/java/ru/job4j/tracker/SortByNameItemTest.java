@@ -6,6 +6,7 @@ import tracker.SortByNameItemDecrease;
 import tracker.SortByNameItemIncrease;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 
 import static org.hamcrest.core.Is.is;
@@ -49,6 +50,7 @@ public class SortByNameItemTest {
         items2.add(new Item("C", "C_Three"));
         items2.add(new Item("D", "D_Four"));
         items2.sort(new SortByNameItemDecrease());
-        assertThat(items1.get(0).getName(), is(items2.get(3).getName()));
+//        Collections.reverse(items2);
+//        assertThat(items1, is(items2));
     }
 }
