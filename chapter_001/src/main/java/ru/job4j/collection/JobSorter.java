@@ -13,6 +13,12 @@ public class JobSorter {
                 new Job("X task", 0)
         );
         Collections.sort(jobs, new JobDescByPriorityDecrease());
-        System.out.println(jobs);
+        //System.out.println(jobs);
+
+        int rsl = new JobDescByNameDecrease().compare(
+                new Job("Impl task", 0),
+                new Job("Fix bug", 2)
+        );
+        System.out.println(rsl);
     }
 }
