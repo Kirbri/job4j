@@ -1,55 +1,34 @@
-
+<?xml version="1.0" encoding="UTF-8"?>
 <project xmlns="http://maven.apache.org/POM/4.0.0"
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
-    <!-- Версия модели описания  Maven. Это не версия maven, а именно модель. -->
-    <!-- Версия Maven: 3.х. Версия модели maven: 4.0.0 -->
-    <!-- modelVersion указывает, как Maven должен интерпретировать pom.xml. -->
     <modelVersion>4.0.0</modelVersion>
-    <!-- укажем наш сайт - группировка библиотек, например, Job4j.ru выпускает несколько продуктов и мы хотим,
-    чтобы эти проекты все лежали в одной папке ru.job4j. В java обычно используют имя домена, хотя имяможет быть любым. -->
+
     <groupId>ru.job4j</groupId>
-    <!-- в артефакте указывают название проекта, например, java-a-to-z или junior -->
-    <!-- artifactId - уникальный ключ нашей библиотеке. Уникальность должна обеспечиваться сочетанием двух ключей groupId
-    и artifactId. -->
-    <artifactId>junior</artifactId>
-    <!-- здесь мы указываем, как мы собираем проект, например в jar, ear, war или указать pom, если данный pom.xml
-    является родителем для других модулей -->
+    <artifactId>job4j</artifactId>
     <packaging>pom</packaging>
-    <!-- укажем версию проекта или библиотеки -->
-    <version>2.0</version>
-    <!-- имя проекта -->
-    <name>junior</name>
-    <!-- доменное имя проекта -->
-    <!-- сочетание groupId + artifactId + version - позволяют найти нужную библиотеку и загрузить ее в проект. -->
-    <url>http://job4j.ru</url>
-    <!-- настройка окружения пакета -->
-    <properties>
-        <!-- пропишем версию компилятора, которая должна выполнятся в среде программирования -->
-        <!-- версия компилятора -->
-        <maven.compiler.source>12</maven.compiler.source>
-        <!-- версия для компилированных файлов -->
-        <maven.compiler.target>12</maven.compiler.target>
-        <!-- кодировка -->
-        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <source>12</source>
-        <target>12</target>
-    </properties>
-    <!-- подключим все подпроекты (дочерние pom) -->
+    <version>3.6.3</version>
+    <!--    <configuration>-->
+    <!--        <configLocation>checkstyle.xml</configLocation>-->
+    <!--    </configuration>-->
     <modules>
         <module>chapter_001</module>
         <module>chapter_002</module>
     </modules>
-    <!-- подключим сторонние библиотеки, которые будут нужны в проекте -->
+
+    <properties>
+        <maven.compiler.source>14</maven.compiler.source>
+        <maven.compiler.target>14</maven.compiler.target>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    </properties>
+
     <dependencies>
-        <!-- библиотека для тестирования -->
         <dependency>
             <groupId>org.hamcrest</groupId>
             <artifactId>hamcrest-all</artifactId>
             <version>1.3</version>
             <scope>test</scope>
         </dependency>
-        <!-- библиотека для тестирования -->
         <dependency>
             <groupId>junit</groupId>
             <artifactId>junit</artifactId>
@@ -57,20 +36,9 @@
             <scope>test</scope>
         </dependency>
     </dependencies>
+
     <build>
         <plugins>
-            <!-- плагин maven-site -->
-            <!--			<plugin>-->
-            <!--				<groupId>org.apache.maven.plugins</groupId>-->
-            <!--				<artifactId>maven-site-plugin</artifactId>-->
-            <!--				<version>3.8.2</version>-->
-            <!--			</plugin>-->
-            <!--			<plugin>-->
-            <!--				<groupId>org.apache.maven.plugins</groupId>-->
-            <!--				<artifactId>maven-project-info-reports-plugin</artifactId>-->
-            <!--				<version>3.0.0</version>-->
-            <!--			</plugin>-->
-            <!-- плагин JaCoCo -->
             <plugin>
                 <groupId>org.jacoco</groupId>
                 <artifactId>jacoco-maven-plugin</artifactId>
@@ -90,34 +58,28 @@
                     </execution>
                 </executions>
             </plugin>
-            <!-- плагины maven -->
-            <!--			<plugin>-->
-            <!--				<artifactId>maven-surefire-plugin</artifactId>-->
-            <!--				<version>3.0.0-M1</version>-->
-            <!--				<configuration>-->
-            <!--					<skip>true</skip>-->
-            <!--				</configuration>-->
-            <!--			</plugin>-->
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-compiler-plugin</artifactId>
-                <version>3.8.1</version>
-                <configuration>
-                    <source>12</source>
-                    <target>12</target>
-                    <testSource>12</testSource>
-                    <testTarget>12</testTarget>
-                    <showWarnings>true</showWarnings>
-                    <showDeprecation>true</showDeprecation>
-                </configuration>
-                <dependencies>
-                    <dependency>
-                        <groupId>org.ow2.asm</groupId>
-                        <artifactId>asm</artifactId>
-                        <version>6.2</version>
-                    </dependency>
-                </dependencies>
+                <artifactId>maven-shade-plugin</artifactId>
+                <version>3.2.0</version>
+                <executions>
+                    <execution>
+                        <phase>package</phase>
+                        <goals>
+                            <goal>shade</goal>
+                        </goals>
+                        <configuration>
+                            <finalName>tracker</finalName>
+                            <transformers>
+                                <transformer implementation="org.apache.maven.plugins.shade.resource.ManifestResourceTransformer">
+                                    <mainClass>tracker.StartUI</mainClass>
+                                </transformer>
+                            </transformers>
+                        </configuration>
+                    </execution>
+                </executions>
             </plugin>
         </plugins>
     </build>
+
 </project>
