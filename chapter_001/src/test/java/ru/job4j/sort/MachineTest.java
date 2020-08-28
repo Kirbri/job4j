@@ -3,7 +3,8 @@ package ru.job4j.sort;
 import org.junit.Test;
 import sort.Machine;
 
-import static org.hamcrest.Matchers.is;
+
+import static org.hamcrest.core.Is.is;
 import static org.junit.Assert.assertThat;
 
 public class MachineTest {

@@ -5,7 +5,6 @@ import tracker.Item;
 import tracker.Tracker;
 import static org.hamcrest.core.IsNull.nullValue;
 
-import static org.hamcrest.Matchers.is;
 import static org.junit.Assert.assertThat;
 
 public class TrackerTest {
