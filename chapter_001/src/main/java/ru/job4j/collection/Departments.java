@@ -1,10 +1,12 @@
 package ru.job4j.collection;
 
+import jdk.swing.interop.SwingInterOpUtils;
+
 import java.util.*;
 
 public class Departments {
     public static List<String> fillGaps(List<String> deps) {
-        HashSet<String> tmp = new HashSet<>();
+        TreeSet<String> tmp = new TreeSet<>();
         for (String value : deps) {
             String start = "";
             for (String el : value.split("/")) {
@@ -13,13 +15,10 @@ public class Departments {
                 } else {
                     start = start + "/" + el;
                 }
-            tmp.add(start);
+                tmp.add(start);
             }
-
         }
-        List<String> collect = new ArrayList<>(tmp);
-        sortAsc(collect);
-        return collect;
+        return new ArrayList<>(tmp);
     }
 
     public static void sortAsc(List<String> orgs) {
@@ -29,5 +28,4 @@ public class Departments {
     public static void sortDesc(List<String> orgs) {
         orgs.sort(new DepDescComp());
     }
-
 }
