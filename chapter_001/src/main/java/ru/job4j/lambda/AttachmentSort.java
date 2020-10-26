@@ -25,6 +25,16 @@ public class AttachmentSort {
                 return left.getName().compareTo(right.getName());
             }
         };
+
+        Comparator<Attachment> comparatorSizeLabmda = (left, right) -> left.getSize() - right.getSize();
+
+        Comparator<String> cmpSize = (left, right) -> left.length() - right.length();
+
+        Comparator<String> cmpText = (left, right) -> left.compareTo(right);
+
+        Comparator<String> cmpDescSize = (left, right) -> left.length() - right.length();
+
+
         attachments.sort(comparatorSize);
         System.out.println(attachments);
 
